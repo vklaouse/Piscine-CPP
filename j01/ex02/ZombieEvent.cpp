@@ -6,15 +6,13 @@
 //   By: vklaouse <marvin@42.fr>                    +#+  +:+       +#+        //
 //                                                +#+#+#+#+#+   +#+           //
 //   Created: 2016/08/11 16:57:34 by vklaouse          #+#    #+#             //
-//   Updated: 2016/08/14 00:19:41 by vklaouse         ###   ########.fr       //
+//   Updated: 2016/08/14 01:26:58 by vklaouse         ###   ########.fr       //
 //                                                                            //
 // ************************************************************************** //
 
 #include <string>
 #include "ZombieEvent.hpp"
 #include <iostream>
-#include <cstdlib>
-#include <ctime>
 
 void ZombieEvent::setZombieType()
 {
