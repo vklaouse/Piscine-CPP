@@ -6,19 +6,21 @@
 //   By: vklaouse <marvin@42.fr>                    +#+  +:+       +#+        //
 //                                                +#+#+#+#+#+   +#+           //
 //   Created: 2016/08/14 07:27:35 by vklaouse          #+#    #+#             //
-//   Updated: 2016/08/14 08:05:19 by vklaouse         ###   ########.fr       //
+//   Updated: 2016/08/16 15:04:18 by vklaouse         ###   ########.fr       //
 //                                                                            //
 // ************************************************************************** //
 
 #ifndef FIXED_CLASS_HPP
 # define FIXED_CLASS_HPP
 
-class {
+#include <iostream>
+
+class Fixed{
 
 private:
 
-	int fixe;
-	static const int fractionalbits;
+	int _fixe;
+	static const int _fractionalbits;
 
 public:
 
@@ -33,5 +35,7 @@ public:
 	Fixed &operator=(Fixed const & rhs);
 
 };
+
+std::ostream & operator<<(std::ostream & o, Fixed const & rhs);
 
 #endif
