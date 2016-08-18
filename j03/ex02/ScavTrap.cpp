@@ -6,7 +6,7 @@
 //   By: vklaouse <marvin@42.fr>                    +#+  +:+       +#+        //
 //                                                +#+#+#+#+#+   +#+           //
 //   Created: 2016/08/17 18:12:48 by vklaouse          #+#    #+#             //
-//   Updated: 2016/08/17 20:39:11 by vklaouse         ###   ########.fr       //
+//   Updated: 2016/08/18 17:32:30 by vklaouse         ###   ########.fr       //
 //                                                                            //
 // ************************************************************************** //
 
@@ -14,9 +14,9 @@
 #include <iostream>
 #include <string>
 
-ScavTrap::ScavTrap() : ClapTrap(100, 100, 50, 50, 1, 20, 15, 3, "<NO NAME>")
+ScavTrap::ScavTrap() : ClapTrap(100, 50, 20, 15, 3, "<NO NAME>")
 {
-	std::cout << "SC4V-TP " + _Name + " ready for a CHALLENGE ! " << std::endl;
+	std::cout << "SC4V-TP <NO NAME> ready for a CHALLENGE ! " << std::endl;
 }
 
 ScavTrap::~ScavTrap()
@@ -24,20 +24,20 @@ ScavTrap::~ScavTrap()
 	std::cout << "Destructor ScavTrap Called." << std::endl;
 }
 
-ScavTrap::ScavTrap(std::string Name): ClapTrap(100, 100, 50, 50, 1, 20, 15, 3, Name)
+ScavTrap::ScavTrap(std::string Name): ClapTrap(100, 50, 20, 15, 3, Name)
 {
-	std::cout << "SC4V-TP " + _Name + " ready for the CHALLENGE ! " << std::endl;
+	std::cout << "SC4V-TP " << _Name << " ready for the CHALLENGE ! " << std::endl;
 }
 
 ScavTrap::ScavTrap(ScavTrap const & src) : ClapTrap(src)
 {
-	std::cout << "SC4V-TP " + _Name + " clone ready for the CHALLENGE ! " << std::endl;
+	std::cout << "SC4V-TP " << _Name << " clone ready for the CHALLENGE ! " << std::endl;
 }
 
 ScavTrap &ScavTrap::operator=(ScavTrap const & rhs)
 {
 	ClapTrap::operator=(rhs);
-	std::cout << "SC4V-TP " + _Name + " receives new data" << std::endl;
+	std::cout << "SC4V-TP " << _Name << " receives new data" << std::endl;
 	return (*this);
 }
 

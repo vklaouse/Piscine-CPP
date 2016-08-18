@@ -6,7 +6,7 @@
 //   By: vklaouse <marvin@42.fr>                    +#+  +:+       +#+        //
 //                                                +#+#+#+#+#+   +#+           //
 //   Created: 2016/08/17 19:41:09 by vklaouse          #+#    #+#             //
-//   Updated: 2016/08/17 20:23:05 by vklaouse         ###   ########.fr       //
+//   Updated: 2016/08/18 17:20:05 by vklaouse         ###   ########.fr       //
 //                                                                            //
 // ************************************************************************** //
 
@@ -19,7 +19,7 @@ ClapTrap::ClapTrap() : _Hit_points(100), _Max_hit_points(100), _Energy_points(50
 	std::cout << "Constructor CL4P-TP called !" << std::endl;
 }
 
-ClapTrap::ClapTrap(std::string Name) : _Hit_points(100), _Max_hit_points(100), _Energy_points(50), _Max_energy_points(50), _Level(1), _Melee_attack_damage(20), _Ranged_attack_damage(15), _Armor_damage_reduction(3), _Name(Name)
+ClapTrap::ClapTrap(int Hit_points, int Energy_points, int Melee_attack_damage, int Ranged_attack_damage, int Armor_damage_reduction, std::string name) : _Hit_points(Hit_points), _Max_hit_points(Hit_points), _Energy_points(Energy_points), _Max_energy_points(Energy_points), _Level(1), _Melee_attack_damage(Melee_attack_damage), _Ranged_attack_damage(Ranged_attack_damage), _Armor_damage_reduction(Armor_damage_reduction), _Name(name)
 {
 }
 

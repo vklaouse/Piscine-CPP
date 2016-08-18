@@ -6,7 +6,7 @@
 //   By: vklaouse <marvin@42.fr>                    +#+  +:+       +#+        //
 //                                                +#+#+#+#+#+   +#+           //
 //   Created: 2016/08/17 18:12:42 by vklaouse          #+#    #+#             //
-//   Updated: 2016/08/17 20:39:35 by vklaouse         ###   ########.fr       //
+//   Updated: 2016/08/18 17:29:51 by vklaouse         ###   ########.fr       //
 //                                                                            //
 // ************************************************************************** //
 
@@ -14,6 +14,7 @@
 # define SCAVTRAP_HPP
 
 #include <string>
+#include "ClapTrap.hpp"
 
 class ScavTrap : public ClapTrap{ 
 

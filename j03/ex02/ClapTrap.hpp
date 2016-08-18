@@ -6,7 +6,7 @@
 //   By: vklaouse <marvin@42.fr>                    +#+  +:+       +#+        //
 //                                                +#+#+#+#+#+   +#+           //
 //   Created: 2016/08/17 19:41:16 by vklaouse          #+#    #+#             //
-//   Updated: 2016/08/17 20:18:40 by vklaouse         ###   ########.fr       //
+//   Updated: 2016/08/18 17:01:18 by vklaouse         ###   ########.fr       //
 //                                                                            //
 // ************************************************************************** //
 
@@ -32,7 +32,7 @@ protected:
 public:
 
 	ClapTrap();
-	ClapTrap(std::string name);
+	ClapTrap(int Hit_points, int Energy_points, int Melee_attack_damage, int Ranged_attack_damage, int Armor_damage_reduction, std::string name);
 	ClapTrap(ClapTrap const & src);
 	~ClapTrap();
 
