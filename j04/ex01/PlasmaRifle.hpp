@@ -6,7 +6,7 @@
 //   By: vklaouse <marvin@42.fr>                    +#+  +:+       +#+        //
 //                                                +#+#+#+#+#+   +#+           //
 //   Created: 2016/09/05 13:46:45 by vklaouse          #+#    #+#             //
-//   Updated: 2016/09/06 18:04:54 by vklaouse         ###   ########.fr       //
+//   Updated: 2016/09/07 15:33:27 by vklaouse         ###   ########.fr       //
 //                                                                            //
 // ************************************************************************** //
 
@@ -24,7 +24,7 @@ public:
 	~PlasmaRifle();
 
 	PlasmaRifle &operator=(PlasmaRifle const & rhs);
-	virtual void attack();
+	virtual void attack() const;
 };
 
 #endif

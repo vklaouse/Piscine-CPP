@@ -6,7 +6,7 @@
 //   By: vklaouse <marvin@42.fr>                    +#+  +:+       +#+        //
 //                                                +#+#+#+#+#+   +#+           //
 //   Created: 2016/09/05 13:47:27 by vklaouse          #+#    #+#             //
-//   Updated: 2016/09/06 19:28:44 by vklaouse         ###   ########.fr       //
+//   Updated: 2016/09/07 15:55:29 by vklaouse         ###   ########.fr       //
 //                                                                            //
 // ************************************************************************** //
 
@@ -16,7 +16,7 @@ Enemy::Enemy() : _type(""), _HitPoints(0)
 {
 }
 
-Enemy::Enemy(int hp, std::string const & type) : _HitPoints(0), _type("")
+Enemy::Enemy(int hp, std::string const & type) : _HitPoints(hp), _type(type)
 {
 }
 

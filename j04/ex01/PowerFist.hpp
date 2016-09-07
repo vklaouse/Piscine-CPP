@@ -6,7 +6,7 @@
 //   By: vklaouse <marvin@42.fr>                    +#+  +:+       +#+        //
 //                                                +#+#+#+#+#+   +#+           //
 //   Created: 2016/09/05 13:47:13 by vklaouse          #+#    #+#             //
-//   Updated: 2016/09/06 20:06:10 by vklaouse         ###   ########.fr       //
+//   Updated: 2016/09/07 15:34:11 by vklaouse         ###   ########.fr       //
 //                                                                            //
 // ************************************************************************** //
 
@@ -24,7 +24,7 @@ public:
 	~PowerFist();
 
 	PowerFist &operator=(PowerFist const &rhs);
-	void attack();
+	void attack() const;
 
 };
 

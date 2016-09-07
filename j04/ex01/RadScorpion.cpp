@@ -6,7 +6,7 @@
 //   By: vklaouse <marvin@42.fr>                    +#+  +:+       +#+        //
 //                                                +#+#+#+#+#+   +#+           //
 //   Created: 2016/09/05 13:48:23 by vklaouse          #+#    #+#             //
-//   Updated: 2016/09/06 19:53:39 by vklaouse         ###   ########.fr       //
+//   Updated: 2016/09/07 15:48:21 by vklaouse         ###   ########.fr       //
 //                                                                            //
 // ************************************************************************** //
 
@@ -25,7 +25,6 @@ RadScorpion::RadScorpion(RadScorpion const & src) : Enemy(src)
 
 RadScorpion::~RadScorpion()
 {
-	std::cout << "* SPROTCH *" <<std::endl;
 }
 
 RadScorpion &RadScorpion::operator=(RadScorpion const &rhs)
@@ -38,5 +37,7 @@ void RadScorpion::takeDamage(int damage)
 {
     if (this->getHP() <= 0)
 		return ;
-
+	Enemy::takeDamage(damage);
+	if (this->getHP() <= 0)
+		std::cout << "* SPROTCH *" <<std::endl;
 }

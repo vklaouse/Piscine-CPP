@@ -6,7 +6,7 @@
 //   By: vklaouse <marvin@42.fr>                    +#+  +:+       +#+        //
 //                                                +#+#+#+#+#+   +#+           //
 //   Created: 2016/09/05 13:48:41 by vklaouse          #+#    #+#             //
-//   Updated: 2016/09/06 20:23:02 by vklaouse         ###   ########.fr       //
+//   Updated: 2016/09/07 15:36:50 by vklaouse         ###   ########.fr       //
 //                                                                            //
 // ************************************************************************** //
 
@@ -38,7 +38,7 @@ public:
 	void attack(Enemy*);
 	std::string virtual getName() const;	
 	Character &operator=(Character const &rhs);
-	const AWeapon getWeapon() const;
+	const AWeapon *getWeapon() const;
 	int getAP() const;
 
 };

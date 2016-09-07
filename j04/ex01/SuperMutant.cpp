@@ -6,7 +6,7 @@
 //   By: vklaouse <marvin@42.fr>                    +#+  +:+       +#+        //
 //                                                +#+#+#+#+#+   +#+           //
 //   Created: 2016/09/05 13:47:49 by vklaouse          #+#    #+#             //
-//   Updated: 2016/09/06 19:54:22 by vklaouse         ###   ########.fr       //
+//   Updated: 2016/09/07 15:50:52 by vklaouse         ###   ########.fr       //
 //                                                                            //
 // ************************************************************************** //
 
@@ -25,7 +25,6 @@ SuperMutant::SuperMutant(SuperMutant const & src) : Enemy(src)
 
 SuperMutant::~SuperMutant()
 {
-	std::cout << "Aaargh..." << std::endl;
 }
 
 SuperMutant &SuperMutant::operator=(SuperMutant const &rhs)
@@ -37,6 +36,10 @@ SuperMutant &SuperMutant::operator=(SuperMutant const &rhs)
 void SuperMutant::takeDamage(int damage)
 {
 	if (this->getHP() <= 0)
-		return ;
-	
+        return ;
+	damage -= 3;
+	if (damage > 0)
+		Enemy::takeDamage(damage);
+    if (this->getHP() <= 0)
+		std::cout << "Aaargh..." << std::endl;
 }

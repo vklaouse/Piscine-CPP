@@ -6,7 +6,7 @@
 //   By: vklaouse <marvin@42.fr>                    +#+  +:+       +#+        //
 //                                                +#+#+#+#+#+   +#+           //
 //   Created: 2016/09/05 13:48:46 by vklaouse          #+#    #+#             //
-//   Updated: 2016/09/06 20:27:07 by vklaouse         ###   ########.fr       //
+//   Updated: 2016/09/07 16:10:56 by vklaouse         ###   ########.fr       //
 //                                                                            //
 // ************************************************************************** //
 
@@ -54,10 +54,13 @@ void Character::attack(Enemy *enemy)
 {
 	if (_weapon != NULL)
 	{
-		std::cout << _name << " attacks " << enemy->getType() << " with a " << _weapon->getName() << std::endl;
-/*
-		if (enemy->getHP() <= 0)
-		delete [] enemy;*/
+		if (_AP > _weapon->getAPCost())
+		{
+			std::cout << _name << " attacks " << enemy->getType() << " with a " << _weapon->getName() << std::endl;
+			_weapon->attack();
+			enemy->takeDamage(_weapon->getDamage());
+			_AP -= _weapon->getAPCost();
+		}
 	}
 }
 
@@ -79,7 +82,7 @@ const AWeapon *Character::getWeapon() const
 std::ostream & operator<<(std::ostream & o, Character const &rhs)
 {
 	if (rhs.getWeapon())
-		o << rhs.getName() << " has " << rhs.getAP() << " AP and wields a " << rhs.getWeapon().getName() << std::endl;
+		o << rhs.getName() << " has " << rhs.getAP() << " AP and wields a " << rhs.getWeapon()->getName() << std::endl;
 	else
 		o << rhs.getName() << " has " << rhs.getAP() << " and is unarmed" << std::endl;
 	return (o);
