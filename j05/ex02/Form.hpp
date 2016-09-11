@@ -6,7 +6,7 @@
 //   By: vklaouse <marvin@42.fr>                    +#+  +:+       +#+        //
 //                                                +#+#+#+#+#+   +#+           //
 //   Created: 2016/09/10 19:18:21 by vklaouse          #+#    #+#             //
-//   Updated: 2016/09/10 21:10:03 by vklaouse         ###   ########.fr       //
+//   Updated: 2016/09/11 16:21:33 by vklaouse         ###   ########.fr       //
 //                                                                            //
 // ************************************************************************** //
 
@@ -42,6 +42,7 @@ public:
 	int getGradesign() const;
 	int getExc() const;
 	void beSigned(Bureaucrat &b);
+	virtual void execute(Bureaucrat const & executor) const = 0;
 
 	class GradeTooHighException : public std::exception {
 

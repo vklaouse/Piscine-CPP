@@ -6,7 +6,7 @@
 //   By: vklaouse <marvin@42.fr>                    +#+  +:+       +#+        //
 //                                                +#+#+#+#+#+   +#+           //
 //   Created: 2016/09/10 22:28:21 by vklaouse          #+#    #+#             //
-//   Updated: 2016/09/10 22:42:10 by vklaouse         ###   ########.fr       //
+//   Updated: 2016/09/11 15:58:02 by vklaouse         ###   ########.fr       //
 //                                                                            //
 // ************************************************************************** //
 
@@ -26,7 +26,7 @@ private:
 public:
 
     PresidentialPardonForm();
-    PresidentialPardonForm(std::string _Target);
+    PresidentialPardonForm(std::string Target);
     PresidentialPardonForm(PresidentialPardonForm const &src);
     ~PresidentialPardonForm();
 

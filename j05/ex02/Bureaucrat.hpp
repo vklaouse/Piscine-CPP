@@ -6,7 +6,7 @@
 //   By: vklaouse <marvin@42.fr>                    +#+  +:+       +#+        //
 //                                                +#+#+#+#+#+   +#+           //
 //   Created: 2016/09/08 18:06:23 by vklaouse          #+#    #+#             //
-//   Updated: 2016/09/10 22:07:10 by vklaouse         ###   ########.fr       //
+//   Updated: 2016/09/11 17:09:27 by vklaouse         ###   ########.fr       //
 //                                                                            //
 // ************************************************************************** //
 
@@ -40,6 +40,7 @@ public:
 	void increasesGrade();
 	void decreasesGrade();
 	void signForm(Form &f);
+	int executeForm(Form const & form) const;
 
 	class GradeTooHighException : public std::exception {
 

@@ -6,7 +6,7 @@
 //   By: vklaouse <marvin@42.fr>                    +#+  +:+       +#+        //
 //                                                +#+#+#+#+#+   +#+           //
 //   Created: 2016/09/10 22:27:36 by vklaouse          #+#    #+#             //
-//   Updated: 2016/09/10 22:39:59 by vklaouse         ###   ########.fr       //
+//   Updated: 2016/09/11 15:58:27 by vklaouse         ###   ########.fr       //
 //                                                                            //
 // ************************************************************************** //
 
@@ -26,7 +26,7 @@ private:
 public:
 
 	ShrubberyCreationForm();
-	ShrubberyCreationForm(std::string _Target);
+	ShrubberyCreationForm(std::string Target);
 	ShrubberyCreationForm(ShrubberyCreationForm const &src);
 	~ShrubberyCreationForm();
 

@@ -6,31 +6,36 @@
 //   By: vklaouse <marvin@42.fr>                    +#+  +:+       +#+        //
 //                                                +#+#+#+#+#+   +#+           //
 //   Created: 2016/09/08 18:06:36 by vklaouse          #+#    #+#             //
-//   Updated: 2016/09/10 22:07:51 by vklaouse         ###   ########.fr       //
+//   Updated: 2016/09/11 17:56:03 by vklaouse         ###   ########.fr       //
 //                                                                            //
 // ************************************************************************** //
 
 #include "Bureaucrat.hpp"
 #include "Form.hpp"
+#include "ShrubberyCreationForm.hpp"
+#include "PresidentialPardonForm.hpp"
+#include "RobotomyRequestForm.hpp"
 
 int main()
 {
-	Bureaucrat j = Bureaucrat("Bob", 20);
-	Bureaucrat k = Bureaucrat("Giselle", 40);
-	Bureaucrat l = Bureaucrat("Conrad", 102);
-	Form a = Form("TROLL", 20, 18);
-	Form b = Form("MDR", 40, 50);
+	Bureaucrat b1( "Franky", 40);
+	Bureaucrat b2( "JohnJohn", 1);
+	ShrubberyCreationForm S( "Arbre" );
+	RobotomyRequestForm R( "RobotCop" );
+	PresidentialPardonForm P( "Hollande" );
+	srand(time(NULL));
+	S.beSigned( b1 );
+	S.beSigned( b2 );
+	R.beSigned( b2 );
+	P.beSigned( b2 );
+	std::cout << S << R << P;
 
-	std::cout << a << b;
-	b.beSigned(l);
-	std::cout << a << b;
-	a.beSigned(j);
-	std::cout << a << b;
-	a.beSigned(j);
-	std::cout << a << b;
-	b.beSigned(k);
-	std::cout << a << b;
-	b.beSigned(k);
-	std::cout << a << b;
+	S.execute( b1 );
+	S.execute( b2 );
+	R.execute( b1 );
+	R.execute( b1 );
+	R.execute( b1 );
+	R.execute( b1 );
+	P.execute( b2 );
 	return (0);
 }

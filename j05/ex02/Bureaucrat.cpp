@@ -6,7 +6,7 @@
 //   By: vklaouse <marvin@42.fr>                    +#+  +:+       +#+        //
 //                                                +#+#+#+#+#+   +#+           //
 //   Created: 2016/09/08 18:06:28 by vklaouse          #+#    #+#             //
-//   Updated: 2016/09/10 22:17:47 by vklaouse         ###   ########.fr       //
+//   Updated: 2016/09/11 17:10:03 by vklaouse         ###   ########.fr       //
 //                                                                            //
 // ************************************************************************** //
 
@@ -55,6 +55,20 @@ void Bureaucrat::signForm(Form &f)
 		std::cout << this->getName() << " cannot sign " << f.getName() << " because the form is already signed" << std::endl;
 	else
 		std::cout << this->getName() << " sign " << f.getName() << std::endl;
+}
+
+int Bureaucrat::executeForm(Form const &form) const
+{
+	if (form.getExc() < this->getGrade())
+		std::cout << this->getName() << " cannot execute " << form.getName() << " because he is to low !" << std::endl;
+	else if (form.getSigned() == false)
+		std::cout << this->getName() << " cannot execute " << form.getName() << " because he isn't signed !" << std::endl;
+	else
+	{
+		std::cout << this->getName() << " execute " << form.getName() << " !" << std::endl;
+		return (1);
+	}
+	return (0);
 }
 
 Bureaucrat::GradeTooHighException::GradeTooHighException()
